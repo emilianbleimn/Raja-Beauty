@@ -59,10 +59,13 @@ Dateien und läuft auf jedem Webspace.
 
 ## Veröffentlichen über GitHub Pages
 
-Repository → **Settings → Pages** → unter *Source* **Deploy from a branch**,
-Branch `claude/nice-feynman-wz2q07`, Ordner `/ (root)` → **Save**.
-Nach etwa einer Minute liegt die Seite unter
+Einmalig: Repository → **Settings → Pages** → unter *Source* **GitHub Actions**
+auswählen. Danach veröffentlicht der Workflow `.github/workflows/pages.yml` die
+Seite bei jedem Push automatisch unter
 <https://emilianbleimn.github.io/Raja-Beauty/>.
+
+Dieser eine Schritt lässt sich nicht automatisieren: Der `GITHUB_TOKEN` eines
+Workflows darf eine Pages-Site deployen, aber nicht erstmalig anlegen.
 
 Die `og:`-Angaben in `index.html` zeigen auf genau diese Adresse, damit beim
 Versenden des Links eine Vorschaukarte mit Bild erscheint. Bei einer eigenen
