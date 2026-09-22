@@ -117,6 +117,24 @@
     });
   }
 
+  /* ---------- Logo fuehrt zum Seitenanfang ----------
+     Ohne JavaScript erledigt das der Anker #top. Hier kommt nur weiches
+     Scrollen dazu und das Aufraeumen der Adresszeile, damit kein #top
+     stehen bleibt. */
+  var brand = document.querySelector('.brand');
+  if (brand) {
+    brand.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      closeNav();
+      var sanft = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: sanft ? 'smooth' : 'auto' });
+      if (window.history && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    });
+  }
+
   /* ---------- Jahreszahl ---------- */
   var jahr = document.getElementById('jahr');
   if (jahr) jahr.textContent = String(new Date().getFullYear());
