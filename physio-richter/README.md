@@ -122,3 +122,18 @@ Webspace laufen.
 python3 -m http.server 8000
 # http://localhost:8000/physio-richter/
 ```
+
+## Veroeffentlichen
+
+Der Workflow `.github/workflows/pages.yml` veroeffentlicht bei jedem Push auf
+den Standard-Branch das gesamte Repository auf GitHub Pages — diese Seite
+liegt danach unter
+<https://emilianbleimn.github.io/Raja-Beauty/physio-richter/>.
+
+Von einem Feature-Branch aus geht das nicht: Die Umgebung `github-pages`
+laesst per Branch-Schutzregel nur die als Pages-Quelle eingestellte Branch
+deployen, alles andere wird schon am Umgebungs-Gate abgewiesen. Bis zum Merge
+ist die Vorschau deshalb lokal anzusehen (siehe oben).
+
+Die `og:url`-Angabe in `index.html` zeigt auf genau diese Adresse. Bei einer
+eigenen Domain muss sie angepasst werden.

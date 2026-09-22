@@ -1,8 +1,14 @@
 name: Seite veroeffentlichen
 
 on:
+  # Nur der Standard-Branch. Die Umgebung "github-pages" laesst per
+  # Branch-Schutzregel ausschliesslich die als Pages-Quelle eingestellte
+  # Branch deployen; ein Lauf von einem Feature-Branch wird schon am
+  # Umgebungs-Gate abgewiesen - ohne einen einzigen Schritt und ohne Log,
+  # also als roter Lauf bei jedem Push. Vorschau vorher: lokal per
+  # "python3 -m http.server", live wird es mit dem Merge.
   push:
-    branches: [claude/nice-feynman-wz2q07, claude/vibrant-galileo-pjard1]
+    branches: [claude/nice-feynman-wz2q07]
   workflow_dispatch:
 
 permissions:
