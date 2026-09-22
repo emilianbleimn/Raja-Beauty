@@ -2,7 +2,7 @@ name: Seite veroeffentlichen
 
 on:
   push:
-    branches: [claude/nice-feynman-wz2q07]
+    branches: [claude/nice-feynman-wz2q07, claude/vibrant-galileo-pjard1]
   workflow_dispatch:
 
 permissions:

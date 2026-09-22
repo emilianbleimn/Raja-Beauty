@@ -1,5 +1,9 @@
 # Raja Beauty by Anam — Website-Entwurf
 
+> In diesem Repository liegt noch ein zweiter, unabhängiger Entwurf:
+> [`physio-richter/`](physio-richter/) für die Physiotherapie Sandra Richter
+> in Groß-Umstadt. Die beiden Seiten teilen sich nichts außer dem Repository.
+
 Einseitige Website als **Vorschau für die Kundin**. Sie soll einen groben
 Eindruck von Aufbau, Stil und Tonfall geben — noch keine fertige,
 veröffentlichungsreife Seite.
