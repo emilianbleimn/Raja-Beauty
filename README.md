@@ -57,6 +57,17 @@ assets/img/            Logo, dunkle Logovariante, Seidenhintergrund, Studiofotos
 Kein Build-Schritt, keine Abhängigkeiten. Die Seite besteht aus statischen
 Dateien und läuft auf jedem Webspace.
 
+## Veröffentlichen über GitHub Pages
+
+Repository → **Settings → Pages** → unter *Source* **Deploy from a branch**,
+Branch `claude/nice-feynman-wz2q07`, Ordner `/ (root)` → **Save**.
+Nach etwa einer Minute liegt die Seite unter
+<https://emilianbleimn.github.io/Raja-Beauty/>.
+
+Die `og:`-Angaben in `index.html` zeigen auf genau diese Adresse, damit beim
+Versenden des Links eine Vorschaukarte mit Bild erscheint. Bei einer eigenen
+Domain müssen diese beiden Zeilen angepasst werden.
+
 ## Ansehen
 
 `index.html` im Browser öffnen, oder:
