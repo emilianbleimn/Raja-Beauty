@@ -26,20 +26,19 @@
     toggle.setAttribute('aria-label', dark ? 'Zu hellem Design wechseln' : 'Zu dunklem Design wechseln');
   }
 
+  // Hell ist der Standard - unabhaengig von der Systemeinstellung. Nur eine
+  // zuvor getroffene Wahl der Besucherin schaltet auf dunkel um.
   var saved = read('rb-theme');
   if (saved === 'dark' || saved === 'light') {
     root.setAttribute('data-theme', saved);
     paintToggle(saved);
   } else {
-    paintToggle(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    paintToggle('light');
   }
 
   if (toggle) {
     toggle.addEventListener('click', function () {
-      var current = root.getAttribute('data-theme');
-      if (!current) {
-        current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
+      var current = root.getAttribute('data-theme') || 'light';
       var next = current === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       store('rb-theme', next);

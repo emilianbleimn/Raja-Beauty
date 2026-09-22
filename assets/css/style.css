@@ -69,45 +69,16 @@
 
   --ease: cubic-bezier(.22, .61, .36, 1);
   --header-h: 75px;
+  color-scheme: light;
   --silk-texture: url("../img/silk.jpg");
 }
-/* --- Dunkles Theme: nur Tokens werden neu definiert ---------------------- */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --silk-hi:   #2D241B;
-    --silk:      #1C1611;
-    --silk-2:    #241C16;
-    --silk-deep: #120E0A;
-
-    --gold-deep: #C9A86A;
-    --gold:      #D7B67B;
-    --gold-hi:   #F7ECD2;
-
-    --ink:       #F2E9DA;
-    --ink-soft:  #BCAD9A;
-    --ink-faint: #8E8071;
-
-    --surface:      #211A14;
-    --surface-sunk: #171109;
-    --rule:      rgba(215, 182, 123, .30);
-    --rule-soft: rgba(215, 182, 123, .16);
-    --shadow-soft: 0 18px 50px -28px rgba(0, 0, 0, .78);
-    --shadow-lift: 0 34px 80px -34px rgba(0, 0, 0, .86);
-
-    --foil: linear-gradient(101deg,
-        #A9834A  0%, #D7B67B 14%, #F4E6C4 31%, #FBF3DF 40%,
-        #D4B57C 55%, #A9834A 70%, #EADCB8 86%, #C39E5F 100%);
-
-    --foil-text: linear-gradient(101deg,
-        #A9834A  0%, #D7B67B 14%, #F4E6C4 31%, #FBF3DF 40%,
-        #D4B57C 55%, #A9834A 70%, #EADCB8 86%, #C39E5F 100%);
-
-    --silk-field: radial-gradient(118% 74% at 12% 4%,  #33291E 0%, rgba(51,41,30,0) 56%),
-                  radial-gradient(96%  70% at 92% 94%, #33291E 0%, rgba(51,41,30,0) 52%),
-                  linear-gradient(118deg, #120E0A 0%, #1C1611 26%, #2D241B 47%, #1C1611 68%, #120E0A 100%);
-  }
-}
+/* --- Dunkles Theme ------------------------------------------------------
+   Bewusst NICHT an prefers-color-scheme gekoppelt: Die Marke ist creme mit
+   Gold, das ist der Standard. Wer ein dunkles Betriebssystem nutzt, soll
+   trotzdem zuerst die Markenfassung sehen. Dunkel gibt es nur ueber den
+   Schalter in der Kopfzeile, der data-theme="dark" setzt. */
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --silk-hi:   #2D241B;
   --silk:      #1C1611;
   --silk-2:    #241C16;
@@ -325,10 +296,6 @@ a { color: inherit; }
    „BY ANAM“ nach Creme um, damit sie auf dunklem Grund lesbar bleibt.
    Ein Helligkeitsfilter kann das nicht leisten. */
 .logo-dark { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo-light { display: none; }
-  :root:not([data-theme="light"]) .logo-dark  { display: block; }
-}
 :root[data-theme="dark"] .logo-light { display: none; }
 :root[data-theme="dark"] .logo-dark  { display: block; }
 

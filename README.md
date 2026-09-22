@@ -20,8 +20,10 @@ ausgelesen:
 * **Aufbau:** Die Behandlungen stehen als typografische Karte mit Haarlinien,
   nicht als Kachelraster. Studiobilder sitzen versetzt übereinander.
 
-Helles und dunkles Theme sind beide gestaltet, umschaltbar über das Symbol in
-der Kopfzeile. Für das dunkle Theme gibt es eigene Logodateien
+Das helle Theme ist der Standard — bewusst unabhängig von der
+Systemeinstellung der Besucherin, damit auch auf einem Gerät im Dunkelmodus
+zuerst die cremefarbene Markenfassung erscheint. Dunkel ist über das Symbol in
+der Kopfzeile erreichbar und wird pro Gerät gemerkt. Für das dunkle Theme gibt es eigene Logodateien
 (`logo-dark.png`, `wordmark-dark.png`): darin ist die fast schwarze Zeile
 „BY ANAM“ nach Creme umgefärbt, weil sie sonst auf dunklem Grund verschwindet.
 
